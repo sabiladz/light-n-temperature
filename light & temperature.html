@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h3,h5,h6 {font-family: "Raleway", sans-serif}
+
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 15%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  background-color: #f2f2f2;
+  float: left;
+  width: 54%;
+  padding: 0 20px;
+  margin-top: 7px;
+  overflow: hidden;
+}
+.mainitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.right {
+  background-color: #ccf2ff;
+  float: right;
+  width: 30%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;">
+
+<div style="background-color:#ffe6cc;text-align:center;padding:10px;">
+  <h1>Building Automation</h1>
+  <h3></h3>
+</div>
+
+<div style="overflow:auto">
+ <div class="menu">
+    <div class="menuitem">Light</div>
+    <div class="menuitem">Temperature</div>
+ </div>
+
+ <div class="main">
+    <div class="mainitem"><p>
+    <h2><strong>Light</strong></h2></p>
+    <p>Light plays a central role in regulating circadian rhythm, the body’s internal clock that signals when to be alert and when to rest. Light also affects the production of melatonin, an essential sleep-promoting hormone.</p>
+    
+    <h3>Settings</h3>
+    <p><label for="power">Power:</label>
+    <p><input type="button" onclick="alert('LED is ON!')" value="ON/OFF"></p>
+    
+    <form action="/action_page.php" method="get">
+       <label for="brightness">Brightness:</label>
+       <p><input type="range" id="vol" name="vol" min="0" max="50">
+    </form>
+    
+    <p><form action="/action_page.php">
+       <label for="favcolor">Your favorite color:</label>
+       <p><input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+       <input type="submit">
+    </form>
+    </div>
+
+    <div class="mainitem"><p>
+    <h2><strong>Temperature</strong></h2>
+    <p>Based on circadian rhytym, the internal temperature of a body shifts during a 24-hour period. A body begins to shed warmth right about the time to go bed and continues to cool down until reaching its low point near daybreak, at around 5 a.m. If the temperature in the sleeping environment is too hot or cold, it may affect the drop in body’s internal temperature and causing disrupted sleep.</p>
+    <h3>Your Room's Temperature</h3>
+    </div>
+  </div>
+
+ <div class="right">
+    <h4><i>Light & Sleep</i></h4>
+    <a href="https://www.sleepfoundation.org/bedroom-environment/light-and-sleep">
+    <img src="https://sleeprealm.co/wp-content/uploads/2021/01/maintain-a-good-circadian-rhythm.jpg" style="max-width:100%;height:auto;">
+    </a>
+    <p>Circadian rhythm sleep-wake disorders occur when a person’s internal clock isn’t functioning properly or becomes misaligned with their environment. Many circadian rhythm disorders are tied to patterns of light exposure.</p>
+    <h4><i>The Best Temperature</i></h4>
+    <a href="https://www.sleepfoundation.org/bedroom-environment/best-temperature-for-sleep#:~:text=The%20best%20bedroom%20temperature%20for,for%20the%20most%20comfortable%20sleep.">
+    <img src="https://amerisleep.com/blog/wp-content/uploads/2020/08/What_Is_Circadian_Rhythm-01-scaled.jpg.webp" style="width:100%">
+    </a>
+    <p>Our sleep cycle is regulated by our circadian rhythm. The circadian rhythm is based on the light-and-dark cycle of the sun. This master “body clock” gets its cues from a number of environmental and personal factors, one of them is the temperature.</p>
+ </div>
+</div>
+
+<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> created by 18006 and 18041 </div>
+
+</body>
+</html>
