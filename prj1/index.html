@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="style.css"
+<link rel="stylesheet" href="colorpick.css">
+
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#light" class="w3-button w3-block w3-black">LIGHT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#temp" class="w3-button w3-block w3-black">TEMPERATURE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#circadian" class="w3-button w3-block w3-black">CIRCADIAN RHYTHM</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:50px">Sistem Otomasi Bangunan</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-white w3-large">
+
+<!-- Light Container -->
+<div class="w3-container" id="light">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">LIGHT</span></h5>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+    <p><strong>POWER</strong></p>
+    <div class="toggle">
+        <input type="checkbox">
+        <label for="" class="onbtn">On</label>
+        <label for="" class="ofbtn">Off</label>
+    </div>
+    <p></p>
+    </div>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+    <p><strong>LIGHT COLOR</strong></p>
+    <div class="color-picker"></div>
+    <div id="color-indicator" class="color-indicator"></div>
+    <div id="color-picker"></div>
+    <script src="https:cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+    
+    <script>
+        let colorIndicator = document.getElementById('color-indicator');
+        const colorPicker = new iro.ColorPicker("#color-picker", {
+            width: 180, color: "#fff"
+        });
+        colorPicker.on('color:change', function(color) {
+            colorIndicator.style.backgroundColor = color.hexString;
+        }); 
+    </script>
+
+    <div class="led">
+      <div class="led1">
+        <h5 class="w3-center w3-padding-20"></h5>
+        <p><strong>LED 1</strong></p>
+        <form>
+          <label for="R1">Red</label>
+          <input type="text" name="" id="R1">
+          <label for="G1">Green</label>
+          <input type="text" name="" id="G1">
+          <label for="B1">Blue</label>
+          <input type="text" name="" id="B1">
+          <button id="btn1">Submit</button>
+        </form>
+      </div>
+  
+      <div class="led2">
+        <h5 class="w3-center w3-padding-20"></h5>
+        <p><strong>LED 2</strong></p>
+        <form>
+          <label for="R2">Red</label>
+          <input type="text" name="" id="R2">
+          <label for="G2">Green</label>
+          <input type="text" name="" id="G2">
+          <label for="B2">Blue</label>
+          <input type="text" name="" id="B2">
+          <button id="btn2">Submit</button>
+        </form>
+      </div>
+  
+      <div class="led3">
+        <h5 class="w3-center w3-padding-20"></h5>
+        <p><strong>LED 3</strong></p>
+        <form>
+          <label for="R3">Red</label>
+          <input type="text" name="" id="R3">
+          <label for="G3">Green</label>
+          <input type="text" name="" id="G3">
+          <label for="B3">Blue</label>
+          <input type="text" name="" id="B3">
+          <button id="btn3">Submit</button>
+        </form>
+      </div>
+    </div>
+    <p></p>
+    </div>
+  </div>
+</div>
+
+<!-- Temperature Container -->
+<div class="w3-container" id="temp">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">TEMPERATURE</span></h5>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+    <p><strong>YOUR ROOM'S TEMPERATURE</strong></p>
+    <div class="chart">
+      <div class="ldr-chart">
+        <canvas id="LDR"></canvas>
+      </div>
+      <div class="temp-chart">
+        <canvas id="TEMP"></canvas>
+      </div>
+    </div>
+    <p></p>
+    </div>
+  </div>
+</div>
+
+<!-- Circadian Rhythm Container -->
+<div class="w3-container" id="circadian" style="padding-bottom:32px;">
+  <div class="w3-content w3-center" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CIRCADIAN RHYTHM</span></h5>
+    <a href="https://www.sleepfoundation.org/bedroom-environment/light-and-sleep">
+    <img src="https://sleeprealm.co/wp-content/uploads/2021/01/maintain-a-good-circadian-rhythm.jpg" class="w3-image" style="width:60%;height:auto;">
+    </a>
+    <p><strong>WHAT IS IT?</strong><br>Circadian rhythm sleep-wake disorders occur when a person’s internal clock isn’t functioning properly or becomes misaligned with their environment. Many circadian rhythm disorders are tied to patterns of light exposure and temperature.</p>
+    <p><i>click the image for more information!</i></p>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"></script>
+<script src="script.js"></script>
+<script src="chart.js"></script>
+
+</body>
+</html>

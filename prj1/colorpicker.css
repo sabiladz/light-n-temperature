@@ -1,0 +1,22 @@
+body {
+    background: #000;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.color-picker {
+    position: center;
+}
+.color-indicator {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+#color-picker {
+    display: inline block;
+    margin-left: 40px;
+}
